@@ -1,7 +1,7 @@
 coverage/
 docs/
 node_modules/
-src/
+/src/
 tests/
 tsconfig.json
 webpack.config.ts

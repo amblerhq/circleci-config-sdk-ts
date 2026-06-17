@@ -1,15 +1,18 @@
 {
-  "name": "@circleci/circleci-config-sdk",
-  "version": "0.0.0-development",
+  "name": "@ambler/circleci-config-sdk",
+  "version": "0.12.16",
   "description": "An SDK for building CircleCI Configuration files with JavaScript.",
   "main": "dist/index.js",
   "types": "dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "npx jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "prettier": "prettier --write .",
     "prettier:ci": "prettier --check .",
-    "build": "rm -rf ./dist && npx webpack --mode production",
+    "build": "rm -rf ./dist && npx webpack --mode production && npx tsc -p tsconfig.build.json",
     "build:docs": "typedoc --tsconfig ./tsconfig.json --logLevel Verbose --excludeInternal --internalNamespace internalTypes"
   },
   "repository": {
